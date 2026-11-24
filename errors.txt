@@ -1,0 +1,145 @@
+
+Running 34 tests using 2 workers
+
+[1/34] [chromium] › tests\api\booking.spec.ts:7:3 › Restful-Booker API › 01 creates a booking and returns an identifier
+[2/34] [chromium] › tests\api\booking.spec.ts:17:3 › Restful-Booker API › 02 reads an existing booking by ID
+[3/34] [chromium] › tests\api\booking.spec.ts:26:3 › Restful-Booker API › 03 returns 404 for a non-existent booking ID
+[4/34] [chromium] › tests\api\booking.spec.ts:31:3 › Restful-Booker API › 04 updates a booking using PUT and a valid token
+[5/34] [chromium] › tests\api\booking.spec.ts:44:3 › Restful-Booker API › 05 partially updates a booking using PATCH
+[6/34] [chromium] › tests\api\booking.spec.ts:55:3 › Restful-Booker API › 06 deletes a booking using a valid token
+[7/34] [chromium] › tests\api\booking.spec.ts:66:3 › Restful-Booker API › 07 rejects a PUT update when the token is missing
+[8/34] [chromium] › tests\api\booking.spec.ts:80:3 › Restful-Booker API › 09 rejects an update with an invalid token
+[9/34] [chromium] › tests\api\booking.spec.ts:74:3 › Restful-Booker API › 08 rejects a DELETE when the token is missing
+[10/34] [chromium] › tests\api\booking.spec.ts:89:3 › Restful-Booker API › 10 rejects an update for an invalid booking ID
+[11/34] [chromium] › tests\ui\additional-coverage.spec.ts:15:3 › Additional edge and negative coverage › cart starts empty for a fresh browser context
+[12/34] [chromium] › tests\ui\additional-coverage.spec.ts:21:3 › Additional edge and negative coverage › removing an item from inventory clears cart badge
+  1) [chromium] › tests\ui\additional-coverage.spec.ts:21:3 › Additional edge and negative coverage › removing an item from inventory clears cart badge 
+
+    Test timeout of 30000ms exceeded while running "beforeEach" hook.
+
+      11 |
+      12 | test.describe('Additional edge and negative coverage', () => {
+    > 13 |   test.beforeEach(async ({ page }) => login(page));
+         |        ^
+      14 |
+      15 |   test('cart starts empty for a fresh browser context', async ({ page }) => {
+      16 |     await page.getByTestId('shopping-cart-link').click();
+        at C:\Users\Vaibhav\OneDrive\Documents\Desktop\stackguard-qa-assignment-updated\stackguard-qa-assignment\tests\ui\additional-coverage.spec.ts:13:8
+
+    Error: SauceDemo login page not detected. URL: https://www.saucedemo.com/; HTTP status: 200; title: (unavailable); page text: (unavailable). Check SAUCEDEMO_BASE_URL, network/proxy and whether the page loads manually. Original error: Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('username')
+    Expected: visible
+    Error: Test timeout of 30000ms exceeded.
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('username') with timeout 8000ms
+      - waiting for getByTestId('username')
+      - Test timeout of 30000ms exceeded.
+
+
+       at ..\utils\ui-navigation.ts:12
+
+      10 |     const title = await page.title().catch(() => '(unavailable)');
+      11 |     const snippet = (await page.locator('body').innerText({ timeout: 2_000 }).catch(() => '(unavailable)')).slice(0, 500);
+    > 12 |     throw new Error(`SauceDemo login page not detected. URL: ${page.url()}; HTTP status: ${response?.status() ?? 'unknown'}; title: ${title}; page text: ${snippet}. Check SAUCEDEMO_BASE_URL, network/proxy and whether the page loads manually. Original error: ${String(error)}`);
+         |           ^
+      13 |   }
+      14 | }
+      15 |
+        at openSauceDemo (C:\Users\Vaibhav\OneDrive\Documents\Desktop\stackguard-qa-assignment-updated\stackguard-qa-assignment\utils\ui-navigation.ts:12:11)
+        at login (C:\Users\Vaibhav\OneDrive\Documents\Desktop\stackguard-qa-assignment-updated\stackguard-qa-assignment\tests\ui\additional-coverage.spec.ts:5:3)
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\ui-additional-coverage-Add-821f8-inventory-clears-cart-badge-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\ui-additional-coverage-Add-821f8-inventory-clears-cart-badge-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\ui-additional-coverage-Add-821f8-inventory-clears-cart-badge-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\ui-additional-coverage-Add-821f8-inventory-clears-cart-badge-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  2) [chromium] › tests\ui\additional-coverage.spec.ts:15:3 › Additional edge and negative coverage › cart starts empty for a fresh browser context 
+
+    Test timeout of 30000ms exceeded while running "beforeEach" hook.
+
+      11 |
+      12 | test.describe('Additional edge and negative coverage', () => {
+    > 13 |   test.beforeEach(async ({ page }) => login(page));
+         |        ^
+      14 |
+      15 |   test('cart starts empty for a fresh browser context', async ({ page }) => {
+      16 |     await page.getByTestId('shopping-cart-link').click();
+        at C:\Users\Vaibhav\OneDrive\Documents\Desktop\stackguard-qa-assignment-updated\stackguard-qa-assignment\tests\ui\additional-coverage.spec.ts:13:8
+
+    Error: SauceDemo login page not detected. URL: https://www.saucedemo.com/; HTTP status: 200; title: (unavailable); page text: (unavailable). Check SAUCEDEMO_BASE_URL, network/proxy and whether the page loads manually. Original error: Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('username')
+    Expected: visible
+    Error: Test timeout of 30000ms exceeded.
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('username') with timeout 8000ms
+      - waiting for getByTestId('username')
+      - Test timeout of 30000ms exceeded.
+
+
+       at ..\utils\ui-navigation.ts:12
+
+      10 |     const title = await page.title().catch(() => '(unavailable)');
+      11 |     const snippet = (await page.locator('body').innerText({ timeout: 2_000 }).catch(() => '(unavailable)')).slice(0, 500);
+    > 12 |     throw new Error(`SauceDemo login page not detected. URL: ${page.url()}; HTTP status: ${response?.status() ?? 'unknown'}; title: ${title}; page text: ${snippet}. Check SAUCEDEMO_BASE_URL, network/proxy and whether the page loads manually. Original error: ${String(error)}`);
+         |           ^
+      13 |   }
+      14 | }
+      15 |
+        at openSauceDemo (C:\Users\Vaibhav\OneDrive\Documents\Desktop\stackguard-qa-assignment-updated\stackguard-qa-assignment\utils\ui-navigation.ts:12:11)
+        at login (C:\Users\Vaibhav\OneDrive\Documents\Desktop\stackguard-qa-assignment-updated\stackguard-qa-assignment\tests\ui\additional-coverage.spec.ts:5:3)
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\ui-additional-coverage-Add-b0ed1-for-a-fresh-browser-context-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\ui-additional-coverage-Add-b0ed1-for-a-fresh-browser-context-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\ui-additional-coverage-Add-b0ed1-for-a-fresh-browser-context-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\ui-additional-coverage-Add-b0ed1-for-a-fresh-browser-context-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[13/34] [chromium] › tests\ui\additional-coverage.spec.ts:36:3 › Additional edge and negative coverage › checkout overview preserves the selected product
+[14/34] [chromium] › tests\ui\additional-coverage.spec.ts:28:3 › Additional edge and negative coverage › cannot proceed from empty cart without an order item
+[15/34] [chromium] › tests\ui\cart.spec.ts:15:3 › Cart › adds one product and updates the cart badge
+[16/34] [chromium] › tests\ui\cart.spec.ts:20:3 › Cart › adds multiple products and displays the correct count
+[17/34] [chromium] › tests\ui\cart.spec.ts:26:3 › Cart › shows the selected product in the cart
+[18/34] [chromium] › tests\ui\cart.spec.ts:33:3 › Cart › removes a product from the cart
+[19/34] [chromium] › tests\ui\checkout.spec.ts:17:3 › Checkout › requires first name
+[20/34] [chromium] › tests\ui\checkout.spec.ts:24:3 › Checkout › requires last name
+[21/34] [chromium] › tests\ui\checkout.spec.ts:31:3 › Checkout › requires postal code
+[22/34] [chromium] › tests\ui\checkout.spec.ts:38:3 › Checkout › continues to order overview with valid customer details
+[23/34] [chromium] › tests\ui\checkout.spec.ts:48:3 › Checkout › calculates total as subtotal plus tax
+[24/34] [chromium] › tests\ui\checkout.spec.ts:62:3 › Checkout › completes an order successfully
+[25/34] [chromium] › tests\ui\checkout.spec.ts:72:3 › Checkout › allows the user to cancel checkout details
+[26/34] [chromium] › tests\ui\inventory.spec.ts:13:3 › Inventory › shows six products
+[27/34] [chromium] › tests\ui\inventory.spec.ts:17:3 › Inventory › sorts products by name ascending
+[28/34] [chromium] › tests\ui\inventory.spec.ts:23:3 › Inventory › sorts products by price ascending
+[29/34] [chromium] › tests\ui\inventory.spec.ts:30:3 › Inventory › opens product details from its name
+[30/34] [chromium] › tests\ui\login.spec.ts:9:3 › Login › logs in with valid credentials
+[31/34] [chromium] › tests\ui\login.spec.ts:17:3 › Login › shows an error for an incorrect password
+[32/34] [chromium] › tests\ui\login.spec.ts:24:3 › Login › requires a username
+[33/34] [chromium] › tests\ui\login.spec.ts:30:3 › Login › requires a password
+[34/34] [chromium] › tests\ui\logout.spec.ts:4:1 › logs out and returns to the login page
+  2 failed
+    [chromium] › tests\ui\additional-coverage.spec.ts:15:3 › Additional edge and negative coverage › cart starts empty for a fresh browser context 
+    [chromium] › tests\ui\additional-coverage.spec.ts:21:3 › Additional edge and negative coverage › removing an item from inventory clears cart badge 
+  32 passed (2.3m)
