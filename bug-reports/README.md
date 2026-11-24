@@ -25,6 +25,5 @@ The assignment requires at least two **real, reproducible** defects on Sauce Dem
 - **Severity:** Critical / High / Medium / Low
 - **Reason for severity:**
 - **Reproducibility:** e.g. 3/3 attempts
-- **Evidence:** `bug-reports/evidence/BUG-001.png`
+- **Evidence:** `bug-reports/evidence/BUG-001.mp4git status`
 
-Duplicate this template for BUG-002. Do not claim a defect unless the actual result differs from the expected result and can be reproduced.
